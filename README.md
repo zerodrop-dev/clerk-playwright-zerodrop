@@ -51,9 +51,11 @@ day. Without one, inboxes are public, and one sender reaches at most 5 different
 
 Each run creates a Clerk user with a fresh ZeroDrop address, signs in through Clerk's prebuilt sign-in, waits for
 the email, opens the link in a browser context of its own, checks that Clerk verified it, waits until the original
-tab has a signed-in user, and deletes the user. It
-sends one real email from your development instance, which counts toward that instance's email limits (see Clerk's
-[test emails and phones](https://clerk.com/docs/guides/development/testing/test-emails-and-phones) page).
+tab has a signed-in user, and deletes the user. Its
+emails come from your development instance and count toward that instance's email limits (see Clerk's
+[test emails and phones](https://clerk.com/docs/guides/development/testing/test-emails-and-phones) page). A passing
+run on Nov 25, 2026 got two: the sign-in link, and seven seconds later a second email with no link, most likely Clerk's
+notice of a sign-in from a new device.
 
 ## How it works
 
